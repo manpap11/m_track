@@ -13,6 +13,30 @@ def popup():
 def optw():
     top = tk.Toplevel()
     top.title('Options')
+    top.geometry('275x150')
+
+    #Label init
+    t1 = tk.Label(top, text='Sensitivity:')
+    t1.grid(row=0, column=0)
+    t2 = tk.Label(top, text='Outline Color:')
+    t2.grid(row=1, column=0)
+    t3 = tk.Label(top, text='Outline Width:')
+    t3.grid(row=2, column=0)
+    t4 = tk.Label(top, text='Video Speed:')
+    t4.grid(row=3, column=0)
+    #Option function init
+    sen_e = tk.Entry(top)
+    sen_e.grid(row=0, column=1)
+    #clr = Color for the out_color
+    clr = tk.StringVar()
+    clr.set('Green')
+    out_color = tk.OptionMenu(top, clr, 'Red', 'Green', 'Blue')
+    out_color.grid(row=1, column=1, columnspan=2)
+    out_width = tk.Entry(top)
+    out_width.grid(row=2, column=1, columnspan=2)
+    vid_speed = tk.Entry(top)
+    vid_speed.grid(row=3, column=1, columnspan=2)
+
 
 def logw():
     top = tk.Toplevel()
@@ -22,7 +46,7 @@ def logw():
 #Button and Label declarations
 f2 = tk.LabelFrame(root, text='More Features')
 l1 = tk.Label(root, text='SimpleServo')
-l2 = tk.Label(root, text='SimpleServo is a simple tracking program that allows you\nto track multiple object in a video\nor track a single object using your Webcam.\n(I am not a UI developer as you can see)\n----------------------------------------------')
+l2 = tk.Label(root, text='SimpleServo is a simple tracking program that allows you\nto track multiple objects in a video\nor track a single object using your Webcam.\n----------------------------------------------')
 l3 = tk.Label(root, text='Select video to track:')
 #SOS1-complete the filedialog for custom imports
 imp_btn = tk.Button(root, text='Import', command=allt.main)
