@@ -13,7 +13,7 @@ def popup():
 def optw():
     top = tk.Toplevel()
     top.title('Options')
-    top.geometry('275x150')
+    top.geometry('250x175')
 
     #Label init
     t1 = tk.Label(top, text='Sensitivity:')
@@ -25,17 +25,28 @@ def optw():
     t4 = tk.Label(top, text='Video Speed:')
     t4.grid(row=3, column=0)
     #Option function init
-    sen_e = tk.Entry(top)
+    sen_e = tk.Entry(top, width=5)
     sen_e.grid(row=0, column=1)
     #clr = Color for the out_color
     clr = tk.StringVar()
     clr.set('Green')
     out_color = tk.OptionMenu(top, clr, 'Red', 'Green', 'Blue')
-    out_color.grid(row=1, column=1, columnspan=2)
-    out_width = tk.Entry(top)
-    out_width.grid(row=2, column=1, columnspan=2)
-    vid_speed = tk.Entry(top)
-    vid_speed.grid(row=3, column=1, columnspan=2)
+    out_color.grid(row=1, column=1)
+    out_width = tk.Entry(top, width=5)
+    out_width.grid(row=2, column=1)
+    vid_speed = tk.Entry(top, width=5)
+    vid_speed.grid(row=3, column=1)
+    #Apply and default buttons
+    sen_btn = tk.Button(top, text='Apply')
+    sen_btn.grid(row=0, column=2)
+    clr_btn = tk.Button(top, text='Apply')
+    clr_btn.grid(row=1, column=2)
+    width_btn = tk.Button(top, text='Apply')
+    width_btn.grid(row=2, column=2)
+    speed_btn = tk.Button(top, text='Apply')
+    speed_btn.grid(row=3, column=2)
+    default_btn = tk.Button(top, text='Default', padx=30)
+    default_btn.grid(row=4, column=1, columnspan=2)
 
 
 def logw():
@@ -51,7 +62,7 @@ l3 = tk.Label(root, text='Select video to track:')
 #SOS1-complete the filedialog for custom imports
 imp_btn = tk.Button(root, text='Import', command=allt.main)
 l4 = tk.Label(root, text='Use your Webcam for tracking an Object:')
-#SOS2
+#SOS2-find smth about camera brightness
 web_btn = tk.Button(root, text='Live Play', command=sint.main)
 opt_btn = tk.Button(f2, text='Options', command=optw)
 log_btn = tk.Button(f2, text='Logs', command=logw)
