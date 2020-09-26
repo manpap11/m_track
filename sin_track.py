@@ -21,7 +21,7 @@ def main():
         if succ:
             draw_cont(img, bound_box)
 
-        cv2.imshow('SimpleServo SingleTrack', img)
+        cv2.imshow('SimpleSurvo SingleTrack', img)
 
         if cv2.waitKey(1) & 0xff == ord('q'):
             break
