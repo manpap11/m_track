@@ -70,8 +70,8 @@ def logw():
     top = tk.Toplevel()
     top.title('Logs')
     top.geometry('200x100')
-    l1 = tk.Label(top, text='(Coming Soon...)')
-    l1.pack()
+    log1 = tk.Label(top, text='(Coming Soon...)')
+    log1.pack()
 
 
 #Button and Label declarations
